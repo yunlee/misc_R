@@ -11,6 +11,7 @@ fit = rpart(
     )
   )
 
+all_nodes = as.numeric(rownames(fit$frame))
 
 subset.rpart <- function(tree, node = 1L) {
   data <- eval(tree$call$data, parent.frame(1L))
